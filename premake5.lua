@@ -22,15 +22,19 @@ project "GameEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "gepch.h"
+	pchsource "src/gepch.cpp"
+
 	files
 	{
+		"%{prj.name}/**.h",
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs 
 	{
-		"%{prj.name}/Vendor/spdlog/include"
+		"%{prj.name}/Vendor/spdlog/include/spdlog"
 	}
 
 	filter "system:windows"
@@ -38,11 +42,11 @@ project "GameEngine"
 		staticruntime "On"
 		systemversion "latest"
 
-		defines 
-		{
-			"ENGINE_BUILD_DLL",
-			"ENGINE_PLATFORM_WINDOWS"
-		}
+	defines 
+	{
+		"ENGINE_BUILD_DLL",
+		"ENGINE_PLATFORM_WINDOWS"
+	}
 
 	filter "configurations:Debug"
 		defines "ENGINE_DEBUG"
@@ -75,8 +79,8 @@ project "Sandbox"
 
 	includedirs
 	{
-		"%{prj.name}/Vendor/spdlog/include",
-		"GameEngine/src"
+		"GameEngine/Vendor/spdlog/include/spdlog",
+		"GameEngine"
 	}
 
 	links 
