@@ -11,7 +11,11 @@ workspace "GameEngine"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}" 
 
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "GameEngine/Vendor/GLFW/Include"
+IncludeDir["GameEngine"] = "GameEngine/src"
 
+include "GameEngine/Vendor/GLFW"
 
 
 project "GameEngine"
@@ -22,9 +26,6 @@ project "GameEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "gepch.h"
-	pchsource "src/gepch.cpp"
-
 	files
 	{
 		"%{prj.name}/**.h",
@@ -34,7 +35,16 @@ project "GameEngine"
 
 	includedirs 
 	{
-		"%{prj.name}/Vendor/spdlog/include/spdlog"
+		"%{prj.name}/Vendor/spdlog/include/spdlog",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GameEngine}"
+	}
+
+	links 
+	{
+		"GLFW",
+		"opengl32.lib",
+		"GLFW.lib"
 	}
 
 	filter "system:windows"
@@ -81,6 +91,7 @@ project "Sandbox"
 	{
 		"GameEngine/Vendor/spdlog/include/spdlog",
 		"GameEngine"
+		"GameEngine/Platforms/Windows"
 	}
 
 	links 
@@ -109,3 +120,5 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "ENGINE_DIST"
 		optimize "On"
+
+	

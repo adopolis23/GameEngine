@@ -1,5 +1,8 @@
 #pragma once
 #include "Core.h"
+#include <memory>
+#include "Window.h"
+#include "Log.h"
 
 namespace Engine {
 
@@ -10,6 +13,11 @@ namespace Engine {
 		virtual ~Application();
 
 		void run();
+
+		void OnEvent(Event& e);
+
+	private:
+		std::unique_ptr<Window> m_Window;
 
 	};
 

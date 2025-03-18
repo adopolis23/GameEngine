@@ -8,17 +8,17 @@ namespace Engine
 {
 
 	//enum class for the different event types
-	enum class EventType
+	enum class EventTypeEnum
 	{
 		None = 0,
-
+		WindowResize,
 		KeyPressed,
 	};
 
 
 	//Enum for the event catagories. Each catagory is a 1 shifted over by some number of bits such as Keyboard events are = 00100
 	//This is so that en event can have multiple event catagories applied to it.
-	enum EventCatagory
+	enum EventCatagoryEnum
 	{
 		None = 0,
 		EventCatagoryApplication = BIT(0),
@@ -29,15 +29,15 @@ namespace Engine
 	};
 
 
-	class EventBase
+	class Event
 	{
 	public:
-		virtual ~EventBase() = default;
+		virtual ~Event() = default;
 		
 		inline bool IsHandled() { return m_Handled; }
 
 		//returns the event type of the event. Type is from the event type enum. 
-		virtual EventType GetEventType() const = 0;
+		virtual EventTypeEnum GetEventType() const = 0;
 
 		virtual const char* GetName() const = 0;
 
@@ -47,7 +47,7 @@ namespace Engine
 
 
 		//does an and between the passed catagory and the events catagory flags.
-		bool IsInCatagory(EventCatagory category)
+		bool IsInCatagory(EventCatagoryEnum category)
 		{
 			return GetCatagoryFlags() & category;
 		}
@@ -57,5 +57,8 @@ namespace Engine
 
 	};
 
+
+#define EVENT_TYPE(x) EventTypeEnum GetEventType() { return EventTypeEnum::x; }
+#define EVENT_CATAGORY(x) int GetCatagoryFlags() { return EventCatagoryEnum::x; }
 
 }

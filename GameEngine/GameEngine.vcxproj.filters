@@ -4,6 +4,27 @@
     <Filter Include="Vendor">
       <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendor\GLFW">
+      <UniqueIdentifier>{B2CED015-1E84-490B-A778-43E2132D400F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\deps">
+      <UniqueIdentifier>{0DE04261-F9D8-61B3-220B-47380E6341BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\deps\glad">
+      <UniqueIdentifier>{34C3EE1F-A02F-AA1A-6923-4278D54ECC82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\deps\mingw">
+      <UniqueIdentifier>{BE4F321E-AA49-5B70-93B6-F1807F4FC1DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\include">
+      <UniqueIdentifier>{2588D201-91E9-AF0F-1A57-F6C186B7E6CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\include\GLFW">
+      <UniqueIdentifier>{8422718C-7047-C00C-9992-A59C8516BF2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\GLFW\src">
+      <UniqueIdentifier>{C995381A-3521-A6DE-3E32-29D3AA3C02DF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Vendor\spdlog">
       <UniqueIdentifier>{6B8C7E36-D74C-FA6C-A087-43EA0C073F49}</UniqueIdentifier>
     </Filter>
@@ -43,6 +64,105 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="Vendor\GLFW\deps\getopt.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\glad\gl.h">
+      <Filter>Vendor\GLFW\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\glad\gles2.h">
+      <Filter>Vendor\GLFW\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\glad\vulkan.h">
+      <Filter>Vendor\GLFW\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\linmath.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\mingw\_mingw_dxhelper.h">
+      <Filter>Vendor\GLFW\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\mingw\dinput.h">
+      <Filter>Vendor\GLFW\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\mingw\xinput.h">
+      <Filter>Vendor\GLFW\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\nuklear.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\nuklear_glfw_gl2.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\stb_image_write.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\deps\tinycthread.h">
+      <Filter>Vendor\GLFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\include\GLFW\glfw3.h">
+      <Filter>Vendor\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\include\GLFW\glfw3native.h">
+      <Filter>Vendor\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\cocoa_joystick.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\cocoa_platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\cocoa_time.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\internal.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\linux_joystick.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\mappings.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\null_joystick.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\null_platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\posix_poll.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\posix_thread.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\posix_time.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\win32_joystick.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\win32_platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\win32_thread.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\win32_time.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\wl_platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\x11_platform.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\GLFW\src\xkb_unicode.h">
+      <Filter>Vendor\GLFW\src</Filter>
+    </ClInclude>
     <ClInclude Include="Vendor\spdlog\bench\utils.h">
       <Filter>Vendor\spdlog\bench</Filter>
     </ClInclude>
@@ -391,9 +511,11 @@
     <ClInclude Include="src\Log.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\gepch.h">
+    <ClInclude Include="src\Window.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -402,5 +524,6 @@
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
