@@ -20,8 +20,9 @@ namespace Engine
 			return "Window Resize";
 		}
 
-		EVENT_TYPE(WindowResize)
-		EVENT_CATAGORY(EventCatagoryApplication)
+		EventTypeEnum GetEventType() const { return EventTypeEnum::WindowResize; }
+		int GetCatagoryFlags() const { return EventCatagoryEnum::EventCatagoryApplication; }
+
 
 		unsigned int GetWidth() { return m_width; }
 		unsigned int GetHeight() { return m_Height; }
@@ -32,6 +33,21 @@ namespace Engine
 
 	};
 
+
+	class WindowCloseEvent : public Event
+	{
+	public:
+		WindowCloseEvent() = default;
+
+		const char* GetName() const
+		{
+			return "Window Close";
+		}
+
+		EventTypeEnum GetEventType() const { return EventTypeEnum::WindowClose; }
+		int GetCatagoryFlags() const { return EventCatagoryEnum::EventCatagoryApplication; }
+
+	};
 
 
 }

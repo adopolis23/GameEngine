@@ -1,4 +1,5 @@
 #include "WindowsWindow.h"
+#include <Events/ApplicationEvent.h>
 
 namespace Engine {
 
@@ -63,6 +64,25 @@ namespace Engine {
 				//get the prev set user pointer (m_data)
 				void* UserPointer = glfwGetWindowUserPointer(window);
 				WindowData& data = *(WindowData*)UserPointer;
+
+				data.Width = width;
+				data.Height = height;
+
+				//create the windowresize event object and call the windows event callback
+				//application creats a window and sets its event callback to application::onevent
+				WindowResizeEvent event(width, height);
+				data.Callback(event);
+				
+		});
+
+		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+		{
+				//get the prev set user pointer (m_data)
+				void* UserPointer = glfwGetWindowUserPointer(window);
+				WindowData& data = *(WindowData*)UserPointer;
+
+				WindowCloseEvent event;
+				data.Callback(event);
 		});
 
 	}

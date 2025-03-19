@@ -12,6 +12,7 @@ namespace Engine
 	{
 		None = 0,
 		WindowResize,
+		WindowClose,
 		KeyPressed,
 	};
 
@@ -56,9 +57,5 @@ namespace Engine
 		bool m_Handled = false;
 
 	};
-
-
-#define EVENT_TYPE(x) EventTypeEnum GetEventType() { return EventTypeEnum::x; }
-#define EVENT_CATAGORY(x) int GetCatagoryFlags() { return EventCatagoryEnum::x; }
 
 }
