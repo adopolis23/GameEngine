@@ -7,7 +7,7 @@ Engine::Application::Application()
 	auto callback = std::bind(&Application::OnEvent, this, std::placeholders::_1);
 	m_Window->SetEventCallback(callback);
 
-	//m_Running = true;
+	m_Running = true;
 }
 
 Engine::Application::~Application()

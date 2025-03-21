@@ -94,6 +94,9 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\GameEngine\GameEngine.lib</ImportLibrary>
       <AdditionalLibraryDirectories>C:\Windows\System32;$(SolutionDir)\GameEngine\Vendor\GLFW\bin\Debug-windows-x86_64\GLFW;D:\dev\GameEngine\GameEngine\Vendor\GLFW\bin\Debug-windows-x86_64\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /D "$(TargetDir)*.dll" "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

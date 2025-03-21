@@ -70,6 +70,11 @@ project "GameEngine"
 		defines "ENGINE_DIST"
 		optimize "On"
 
+	postbuildcommands
+	{
+	"xcopy /Y /D "$(TargetDir)*.dll" "$(SolutionDir)bin\Debug-windows-x86_64\Sandbox\""
+	}
+
 
 
 
