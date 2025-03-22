@@ -3,6 +3,8 @@
 #include "Window.h"
 #include "Log.h"
 #include "Core.h"
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
 
 namespace Engine {
 

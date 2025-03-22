@@ -1,5 +1,4 @@
 #include "WindowsWindow.h"
-#include <Events/ApplicationEvent.h>
 
 namespace Engine {
 
@@ -85,6 +84,36 @@ namespace Engine {
 				data.Callback(event);
 		});
 
+
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
+			{
+				//get the prev set user pointer (m_data)
+				void* UserPointer = glfwGetWindowUserPointer(window);
+				WindowData& data = *(WindowData*)UserPointer;
+
+				switch (action)
+				{
+					case GLFW_PRESS:
+					{
+						KeyPressedEvent event(key, 0);
+						data.Callback(event);
+						break;
+					}
+					case GLFW_RELEASE:
+					{
+						KeyReleasedEvent event(key);
+						data.Callback(event);
+						break;
+					}
+					case GLFW_REPEAT:
+					{
+						KeyPressedEvent event(key, 1);
+						data.Callback(event);
+						break;
+					}
+				}
+
+			});
 	}
 
 

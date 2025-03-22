@@ -14,6 +14,7 @@ namespace Engine
 		WindowResize,
 		WindowClose,
 		KeyPressed,
+		KeyReleased
 	};
 
 
