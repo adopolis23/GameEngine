@@ -16,7 +16,16 @@ Engine::Application::~Application()
 
 void Engine::Application::OnEvent(Event& e)
 {
+	EventDispatcher dispatcher(e);
+	dispatcher.Dispatch<WindowCloseEvent>(std::bind(&Application::OnWindowClose, this, std::placeholders::_1));
+
 	ENGINE_CORE_INFO("Application OnEvent: " + e.ToString());
+}
+
+bool Engine::Application::OnWindowClose(WindowCloseEvent& e)
+{
+	m_Running = false;
+	return true;
 }
 
 void Engine::Application::run()

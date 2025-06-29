@@ -36,7 +36,7 @@ namespace Engine
 	public:
 		virtual ~Event() = default;
 		
-		inline bool IsHandled() { return m_Handled; }
+		inline bool IsHandled() { return Handled; }
 
 		//returns the event type of the event. Type is from the event type enum. 
 		virtual EventTypeEnum GetEventType() const = 0;
@@ -54,9 +54,43 @@ namespace Engine
 			return GetCatagoryFlags() & category;
 		}
 
-	private:
-		bool m_Handled = false;
+		bool Handled = false;
 
 	};
+
+
+
+	class EventDispatcher
+	{
+	public:
+
+		//eventfn is a function that returns bool and takes in a reference to T.
+		template <typename T>
+		using EventFn = std::function<bool(T&)>;
+
+		EventDispatcher(Event& event)
+			: m_Event(event)
+		{
+		}
+
+		template<typename T>
+		bool Dispatch(EventFn<T> func)
+		{
+			if (m_Event.GetEventType() == T::GetStaticType())
+			{
+				m_Event.Handled = func(*(T*) &m_Event);
+				return true;
+			}
+			return false;
+		}
+
+	private:
+		Event& m_Event;
+	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.ToString();
+	}
 
 }

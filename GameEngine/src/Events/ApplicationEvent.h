@@ -44,8 +44,9 @@ namespace Engine
 			return "Window Close";
 		}
 
-		EventTypeEnum GetEventType() const { return EventTypeEnum::WindowClose; }
-		int GetCatagoryFlags() const { return EventCatagoryEnum::EventCatagoryApplication; }
+		const EventTypeEnum GetStaticType() { return EventTypeEnum::WindowClose; }
+		EventTypeEnum GetEventType() const override { return EventTypeEnum::WindowClose; }
+		int GetCatagoryFlags() const override { return EventCatagoryEnum::EventCatagoryApplication; }
 
 	};
 
