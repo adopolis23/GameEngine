@@ -40,7 +40,10 @@ project "Engine"
     -- Include directories
     includedirs {
         "%{prj.name}/include",
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+
+        -- spdlog include dirs
+        "%{prj.name}/Vendor/spdlog/include"
     }
 
     -- Library directories 
@@ -101,7 +104,8 @@ project "Sandbox"
     includedirs {
         "%{prj.name}/include",
         "%{prj.name}/src",
-        "Engine/include"  -- Path to engine headers
+        "Engine/include",  -- Path to engine headers
+        "Engine/Vendor/spdlog/include" -- path to engine spdlog headers TODO: Figure out how to automatically include this
     }
 
     -- Library directories
