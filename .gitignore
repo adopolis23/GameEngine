@@ -1,0 +1,4 @@
+*.make
+compile_flags.txt
+bin
+obj
