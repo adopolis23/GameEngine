@@ -3,6 +3,8 @@ workspace "GameEngine"
     platforms { "x64" }
     -- location "build"
 
+include "Engine/Vendor/GLFW"
+
     -- Common project settings
     filter "configurations:Debug"
         defines { "DEBUG" }
@@ -43,7 +45,10 @@ project "Engine"
         "%{prj.name}/src",
 
         -- spdlog include dirs
-        "%{prj.name}/Vendor/spdlog/include"
+        "%{prj.name}/Vendor/spdlog/include",
+
+        -- GLFW include dirs
+        "%{prj.name}/Vendor/GLFW/include"
     }
 
     -- Library directories 
@@ -54,10 +59,21 @@ project "Engine"
 
     -- Libraries to link 
     links { 
-        -- "user32",
-        -- "kernel32",
-        -- "external_library"
+        "glfw",
+        "GL"
     }
+
+    filter "system:linux"
+      links { 
+         "GL",     -- OpenGL
+         "pthread" -- Required by GLFW on Linux
+      }
+      buildoptions { "-pthread" }
+
+    filter "system:windows"
+      links { 
+         "opengl32"  -- OpenGL on Windows
+      }
 
     -- Define export macro for DLL
     defines {

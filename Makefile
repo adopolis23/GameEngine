@@ -9,10 +9,12 @@ ifndef verbose
 endif
 
 ifeq ($(config),debug_x64)
+  glfw_config = debug_x64
   Engine_config = debug_x64
   Sandbox_config = debug_x64
 
 else ifeq ($(config),release_x64)
+  glfw_config = release_x64
   Engine_config = release_x64
   Sandbox_config = release_x64
 
@@ -20,13 +22,19 @@ else
   $(error "invalid configuration $(config)")
 endif
 
-PROJECTS := Engine Sandbox
+PROJECTS := glfw Engine Sandbox
 
 .PHONY: all clean help $(PROJECTS) 
 
 all: $(PROJECTS)
 
-Engine:
+glfw:
+ifneq (,$(glfw_config))
+	@echo "==== Building glfw ($(glfw_config)) ===="
+	@${MAKE} --no-print-directory -C Engine/Vendor/GLFW -f Makefile config=$(glfw_config)
+endif
+
+Engine: glfw
 ifneq (,$(Engine_config))
 	@echo "==== Building Engine ($(Engine_config)) ===="
 	@${MAKE} --no-print-directory -C . -f Engine.make config=$(Engine_config)
@@ -39,6 +47,7 @@ ifneq (,$(Sandbox_config))
 endif
 
 clean:
+	@${MAKE} --no-print-directory -C Engine/Vendor/GLFW -f Makefile clean
 	@${MAKE} --no-print-directory -C . -f Engine.make clean
 	@${MAKE} --no-print-directory -C . -f Sandbox.make clean
 
@@ -52,6 +61,7 @@ help:
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
+	@echo "   glfw"
 	@echo "   Engine"
 	@echo "   Sandbox"
 	@echo ""

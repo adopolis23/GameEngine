@@ -1,19 +1,20 @@
 #pragma once
 
 #include <string>
+#include <cstddef>
 
 #include "core.h"
 
 namespace Engine 
 {
    
-    struct WindowProperties
+    struct WindowData 
     {
         std::string Title;
         size_t Width;
         size_t Height;
 
-        WindowProperties(const std::string& title = "Engine", size_t width = 1280, size_t height = 720)
+        WindowData(const std::string& title = "Engine", size_t width = 1280, size_t height = 720)
             :Title(title), Width(width), Height(height) {}
     };
      
@@ -22,7 +23,7 @@ namespace Engine
         public:
             virtual ~Window() {}
 
-            virtual void Init(const WindowProperties& props) = 0;
+            virtual void Init(const struct WindowData& props) = 0;
             virtual void OnUpdate() = 0;
 
             virtual size_t GetWidth() const = 0; 
@@ -30,7 +31,7 @@ namespace Engine
 
 
             // creates a window with the default props if none are provided
-            static Window* Create(const WindowProperties& props = WindowProperties());
+            static Window* Create(const WindowData& props = WindowData());
 
         private:
     };
