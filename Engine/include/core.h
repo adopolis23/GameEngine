@@ -8,3 +8,4 @@
     #endif
 #endif
 
+#define BIT(x) (x << 1)

@@ -22,8 +22,8 @@ namespace Engine
             inline size_t GetHeight() const override { return mWindowData.Height; }
 
         private:
-            virtual void Init(const WindowData& props);
-            void SetCallbacks();
+            virtual void Init(const WindowData& props) override;
+            inline void SetEventCallback(const EventCallback& callback) override { mWindowData.Callback = callback; }
             virtual void Shutdown();
 
         private:

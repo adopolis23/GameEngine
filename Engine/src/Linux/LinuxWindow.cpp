@@ -49,14 +49,8 @@ namespace Engine
         //bind the user data of this window to the address of mWindowData
         glfwSetWindowUserPointer(mWindow, &mWindowData);
 
-        //callbacks
-        SetCallbacks();
     }
 
-    void LinuxWindow::SetCallbacks()
-    {
-        return;
-    }
 
     void LinuxWindow::OnUpdate()
     {

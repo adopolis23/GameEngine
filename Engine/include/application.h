@@ -20,9 +20,9 @@ namespace Engine {
             void run();
 
         private:
-            bool mIsRunning;
+            bool mRunning{false};
 
-            std::unique_ptr<Window> mWindow;
+            std::unique_ptr<Window> mWindow{};
 
     };
 
