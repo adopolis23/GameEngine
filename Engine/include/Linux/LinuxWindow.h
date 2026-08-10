@@ -23,7 +23,7 @@ namespace Engine
 
         private:
             virtual void Init(const WindowData& props) override;
-            inline void SetEventCallback(const EventCallback& callback) override { mWindowData.Callback = callback; }
+            inline void SetEventCallback(const EventCallback& callback) override { mWindowData.EventCallbackFn = callback; }
             virtual void Shutdown();
 
         private:

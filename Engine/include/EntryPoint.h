@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 
     // Create and run main application
     auto app = Engine::CreateApplication();
-    app->run();
+    app->Run();
     delete app;
 
     return 0;

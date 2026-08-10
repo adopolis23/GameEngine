@@ -3,6 +3,9 @@
 #include "core.h"
 #include "Log.h"
 #include "Window.h"
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+#include "LayerStack.h"
 
 #include <iostream>
 #include <memory>
@@ -17,12 +20,20 @@ namespace Engine {
             Application();
             virtual ~Application();
 
-            void run();
+            void Run();
+
+            void OnEvent(Event& e);
+
+            void PushLayer(Layer* layer);
+            void PushOverlay(Layer* layer);
 
         private:
-            bool mRunning{false};
+            bool OnWindowClose(WindowCloseEvent& e);
 
+            bool mRunning{false};
             std::unique_ptr<Window> mWindow{};
+            
+            LayerStack mLayerStack;
 
     };
 

@@ -1,5 +1,7 @@
 #include "Linux/LinuxWindow.h"
+#include "Log.h"
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Engine 
 {
@@ -20,6 +22,11 @@ namespace Engine
     {
         return new LinuxWindow(props);
     }
+
+    static void GLFWErrorCallback(int error, const char* description)
+	{
+		ENGINE_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
+	}
 
     //set member window data
     //initialize glfw
@@ -48,6 +55,16 @@ namespace Engine
 
         //bind the user data of this window to the address of mWindowData
         glfwSetWindowUserPointer(mWindow, &mWindowData);
+
+        glfwSetErrorCallback(GLFWErrorCallback);
+
+
+        glfwSetWindowCloseCallback(mWindow, [](GLFWwindow* window)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			WindowCloseEvent event;
+			data.EventCallbackFn(event);
+		});
 
     }
 

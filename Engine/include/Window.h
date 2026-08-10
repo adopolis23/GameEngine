@@ -18,7 +18,7 @@ namespace Engine
         std::string Title;
         size_t Width;
         size_t Height;
-        EventCallback Callback;
+        EventCallback EventCallbackFn;
 
         WindowData(const std::string& title = "Engine", size_t width = 1280, size_t height = 720)
             :Title(title), Width(width), Height(height) {}
