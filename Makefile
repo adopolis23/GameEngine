@@ -10,11 +10,13 @@ endif
 
 ifeq ($(config),debug_x64)
   glfw_config = debug_x64
+  Glad_config = debug_x64
   Engine_config = debug_x64
   Sandbox_config = debug_x64
 
 else ifeq ($(config),release_x64)
   glfw_config = release_x64
+  Glad_config = release_x64
   Engine_config = release_x64
   Sandbox_config = release_x64
 
@@ -22,7 +24,7 @@ else
   $(error "invalid configuration $(config)")
 endif
 
-PROJECTS := glfw Engine Sandbox
+PROJECTS := glfw Glad Engine Sandbox
 
 .PHONY: all clean help $(PROJECTS) 
 
@@ -34,7 +36,13 @@ ifneq (,$(glfw_config))
 	@${MAKE} --no-print-directory -C Engine/Vendor/GLFW -f Makefile config=$(glfw_config)
 endif
 
-Engine: glfw
+Glad:
+ifneq (,$(Glad_config))
+	@echo "==== Building Glad ($(Glad_config)) ===="
+	@${MAKE} --no-print-directory -C Engine/Vendor/Glad -f Makefile config=$(Glad_config)
+endif
+
+Engine: glfw Glad
 ifneq (,$(Engine_config))
 	@echo "==== Building Engine ($(Engine_config)) ===="
 	@${MAKE} --no-print-directory -C . -f Engine.make config=$(Engine_config)
@@ -48,6 +56,7 @@ endif
 
 clean:
 	@${MAKE} --no-print-directory -C Engine/Vendor/GLFW -f Makefile clean
+	@${MAKE} --no-print-directory -C Engine/Vendor/Glad -f Makefile clean
 	@${MAKE} --no-print-directory -C . -f Engine.make clean
 	@${MAKE} --no-print-directory -C . -f Sandbox.make clean
 
@@ -62,6 +71,7 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   glfw"
+	@echo "   Glad"
 	@echo "   Engine"
 	@echo "   Sandbox"
 	@echo ""

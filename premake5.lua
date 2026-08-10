@@ -4,6 +4,7 @@ workspace "GameEngine"
     -- location "build"
 
 include "Engine/Vendor/GLFW"
+include "Engine/Vendor/Glad"
 
     -- Common project settings
     filter "configurations:Debug"
@@ -48,7 +49,10 @@ project "Engine"
         "%{prj.name}/Vendor/spdlog/include",
 
         -- GLFW include dirs
-        "%{prj.name}/Vendor/GLFW/include"
+        "%{prj.name}/Vendor/GLFW/include",
+
+
+        "%{prj.name}/Vendor/Glad/include"
     }
 
     -- Library directories 
@@ -60,6 +64,7 @@ project "Engine"
     -- Libraries to link 
     links { 
         "glfw",
+        "glad",
         "GL"
     }
 
