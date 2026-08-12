@@ -82,7 +82,8 @@ project "Engine"
 
     -- Define export macro for DLL
     defines {
-        "ENGINE_DLL_EXPORT"
+        "ENGINE_DLL_EXPORT",
+        "GLFW_INCLUDE_NONE"
     }
 
     -- Platform-specific settings

@@ -1,7 +1,9 @@
+#include <glad/glad.h>
 #include "Linux/LinuxWindow.h"
 #include "Log.h"
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
+
 
 namespace Engine 
 {
@@ -52,6 +54,13 @@ namespace Engine
 
         mWindow = glfwCreateWindow(mWindowData.Width, mWindowData.Height, mWindowData.Title.c_str(), NULL, NULL);
         glfwMakeContextCurrent(mWindow);
+
+        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        if (!status)
+        {
+            ENGINE_CORE_ERROR("Failed to initialize GLAD");
+            return;
+        }
 
         //bind the user data of this window to the address of mWindowData
         glfwSetWindowUserPointer(mWindow, &mWindowData);
