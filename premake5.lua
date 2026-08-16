@@ -5,6 +5,7 @@ workspace "GameEngine"
 
 include "Engine/Vendor/GLFW"
 include "Engine/Vendor/Glad"
+include "Engine/Vendor/imgui"
 
     -- Common project settings
     filter "configurations:Debug"
@@ -51,8 +52,11 @@ project "Engine"
         -- GLFW include dirs
         "%{prj.name}/Vendor/GLFW/include",
 
+        -- Glad include dirs
+        "%{prj.name}/Vendor/Glad/include",
 
-        "%{prj.name}/Vendor/Glad/include"
+        -- imgui include dirs
+        "%{prj.name}/Vendor/imgui"
     }
 
     -- Library directories 
@@ -65,7 +69,8 @@ project "Engine"
     links { 
         "glfw",
         "glad",
-        "GL"
+        "GL",
+        "ImGui"
     }
 
     filter "system:linux"

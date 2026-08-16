@@ -1,5 +1,6 @@
 #include <glad/glad.h>
 #include "Linux/LinuxWindow.h"
+#include "GLFW/glfw3.h"
 #include "Log.h"
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
@@ -74,6 +75,12 @@ namespace Engine
 			WindowCloseEvent event;
 			data.EventCallbackFn(event);
 		});
+
+        glfwSetWindowSizeCallback(mWindow, [](GLFWwindow* window, int width, int height) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			WindowResizeEvent event(width, height);
+			data.EventCallbackFn(event);
+        });
 
     }
 

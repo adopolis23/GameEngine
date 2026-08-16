@@ -46,7 +46,7 @@ ifeq ($(config),debug_x64)
 TARGETDIR = Glad/bin/Debug/x64
 TARGET = $(TARGETDIR)/libGlad.a
 OBJDIR = Glad/obj/Debug/x64
-DEFINES += -D_DEBUG -DDEBUG
+DEFINES += -D_DEBUG
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -fPIC -g
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -fPIC -g
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64

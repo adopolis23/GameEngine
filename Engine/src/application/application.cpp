@@ -1,8 +1,14 @@
 #include "application.h"
 #include "Events/ApplicationEvent.h"
 #include "Linux/LinuxWindow.h"
+#include "Log.h"
 #include "Window.h"
 #include <GLFW/glfw3.h>
+
+
+
+// Setting the static instance of the application to nullptr by default before it is created.
+Engine::Application* Engine::Application::mInstance = nullptr;
 
 Engine::Application::Application()
 {
@@ -40,6 +46,9 @@ void Engine::Application::OnEvent(Event& e)
         return OnWindowClose(e);
     });
 
+    dispatcher.Dispatch<WindowResizeEvent>([this](WindowResizeEvent& e) {
+        return OnWindowResize(e);
+    });
 
     for (auto it = mLayerStack.end(); it != mLayerStack.begin(); )
     {
@@ -52,6 +61,12 @@ void Engine::Application::OnEvent(Event& e)
 bool Engine::Application::OnWindowClose(WindowCloseEvent& e)
 {
     mRunning = false;
+    return true;
+}
+
+bool Engine::Application::OnWindowResize(WindowResizeEvent& e)
+{
+    ENGINE_CORE_INFO("Resizing window to {}, {}", e.GetWidth(), e.GetHeight());
     return true;
 }
 
