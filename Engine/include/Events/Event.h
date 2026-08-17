@@ -14,12 +14,17 @@ namespace Engine
         None = 0,
         WindowClose,
         WindowResize,
+        KeyPressed,
+        KeyReleased,
+        KeyTyped,
     };
 
     enum EventCategory
     {
         None = 0,
         EventCategoryApplication = BIT(0),
+        EventCategoryKeyboard = BIT(1),
+        EventCategoryInput = BIT(2),
     };
 
     #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\

@@ -3,6 +3,7 @@
 #include "Linux/LinuxWindow.h"
 #include "Log.h"
 #include "Window.h"
+#include "core.h"
 #include <GLFW/glfw3.h>
 
 
@@ -12,6 +13,9 @@ Engine::Application* Engine::Application::mInstance = nullptr;
 
 Engine::Application::Application()
 {
+    ASSERT(mInstance == nullptr, "Application Constructor: Application already exists");
+    mInstance = this; 
+
     mWindow = std::unique_ptr<Window>(Window::Create());
 
 
@@ -30,11 +34,13 @@ Engine::Application::~Application()
 void Engine::Application::PushLayer(Layer* layer)
 {
     mLayerStack.PushLayer(layer);
+    layer->OnAttach();
 }
 
 void Engine::Application::PushOverlay(Layer* layer)
 {
     mLayerStack.PushOverlay(layer);
+    layer->OnAttach();
 }
 
 void Engine::Application::OnEvent(Event& e)

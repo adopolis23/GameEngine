@@ -1,10 +1,15 @@
+#include "ImGui/ImGuiLayer.h"
 #include <Engine.h>
 
 
 class Sandbox : public Engine::Application
 {
     public:
-        Sandbox() {};
+        Sandbox()
+        {
+            PushOverlay(new Engine::ImGuiLayer());
+        };
+
         ~Sandbox() {};
             
     private:
