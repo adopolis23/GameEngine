@@ -24,6 +24,7 @@ namespace Engine
         private:
             virtual void Init(const WindowData& props) override;
             inline void SetEventCallback(const EventCallback& callback) override { mWindowData.EventCallbackFn = callback; }
+            void setGLFWCallbacks();
             virtual void Shutdown();
 
         private:

@@ -5,6 +5,8 @@
 #include <string>
 #include <functional>
 
+#define BIND_EVENT_FUNCTION(type, fn) [this](type& e) { return this->fn(e); }
+
 namespace Engine
 {
 
@@ -17,6 +19,11 @@ namespace Engine
         KeyPressed,
         KeyReleased,
         KeyTyped,
+        MouseMoved,
+        KeyScrolled,
+        MouseButtonPressed,
+        MouseButtonReleased,
+        MouseScrolled,
     };
 
     enum EventCategory
@@ -25,6 +32,7 @@ namespace Engine
         EventCategoryApplication = BIT(0),
         EventCategoryKeyboard = BIT(1),
         EventCategoryInput = BIT(2),
+        EventCategoryMouse = BIT(3),
     };
 
     #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\

@@ -1,5 +1,9 @@
 #include "ImGui/ImGuiLayer.h"
 
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
+#include "Events/MouseEvent.h"
+#include "Events/Event.h"
 #include "imgui.h"
 #include "OpenGl/ImGuiOpenGLRenderer.h"
 #include "GLFW/glfw3.h"
@@ -77,9 +81,50 @@ namespace Engine {
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	}
 
+    bool ImGuiLayer::OnMousePressedEvent(MouseButtonPressedEvent& event)
+    {
+		ImGuiIO& io = ImGui::GetIO();
+		io.MouseDown[event.GetMouseButton()] = true;
+
+		return false;
+    }
+
+    bool ImGuiLayer::OnMouseReleasedEvent(MouseButtonReleasedEvent& event)
+    {
+
+    }
+
+    bool ImGuiLayer::OnMouseMovedEvent(MouseMovedEvent& event)
+    {
+
+    }
+
+    bool ImGuiLayer::OnMouseScrolledEvent(MouseScrolledEvent& event) {}
+    bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& event) {}
+    bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& event) {}
+    bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& event) {}
+    bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& event) {}
+
+
 	void ImGuiLayer::OnEvent(Event& event)
 	{
+        EventDispatcher dispatcher(event);
 
+        dispatcher.Dispatch<MouseButtonPressedEvent>(BIND_EVENT_FUNCTION(MouseButtonPressedEvent, OnMousePressedEvent));
+
+        dispatcher.Dispatch<MouseButtonReleasedEvent>(BIND_EVENT_FUNCTION(MouseButtonReleasedEvent, OnMouseReleasedEvent));
+
+        dispatcher.Dispatch<MouseMovedEvent>(BIND_EVENT_FUNCTION(MouseMovedEvent, OnMouseMovedEvent));
+
+		dispatcher.Dispatch<MouseScrolledEvent>(BIND_EVENT_FUNCTION(MouseScrolledEvent, OnMouseScrolledEvent));
+
+		dispatcher.Dispatch<KeyPressedEvent>(BIND_EVENT_FUNCTION(KeyPressedEvent, OnKeyPressedEvent));
+
+        dispatcher.Dispatch<KeyTypedEvent>(BIND_EVENT_FUNCTION(KeyTypedEvent, OnKeyTypedEvent));
+
+		dispatcher.Dispatch<KeyReleasedEvent>(BIND_EVENT_FUNCTION(KeyReleasedEvent, OnKeyReleasedEvent));
+
+		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FUNCTION(WindowResizeEvent, OnWindowResizeEvent));
 	}
 
 }
