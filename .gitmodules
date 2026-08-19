@@ -6,4 +6,4 @@
 	url = https://github.com/glfw/glfw.git
 [submodule "Engine/Vendor/imgui"]
 	path = Engine/Vendor/imgui
-	url = https://github.com/TheCherno/imgui.git
+	url = git@github.com:ocornut/imgui.git
