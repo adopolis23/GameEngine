@@ -103,6 +103,7 @@ project "Engine"
 
     filter "configurations:Debug"
         targetsuffix ""
+        symbols "On"
         defines { "_DEBUG" }
 
     filter "configurations:Release"
@@ -162,6 +163,7 @@ project "Sandbox"
 
     filter "configurations:Debug"
         targetsuffix ""
+        symbols "On"
         defines { "_DEBUG" }
 
     filter "configurations:Release"
