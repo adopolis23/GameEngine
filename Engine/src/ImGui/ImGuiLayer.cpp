@@ -1,4 +1,5 @@
 #include "ImGui/ImGuiLayer.h"
+#include "ImGui/ImGuiUtilityFunctions.h"
 
 #include "Events/ApplicationEvent.h"
 #include "Events/KeyEvent.h"
@@ -104,12 +105,19 @@ namespace Engine {
     bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& event)
     {
         ImGuiIO& io = ImGui::GetIO();
-		io.KeysDown[event.GetKeycode()] = true;
+		int keycode = event.GetKeycode();
 
-		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
-		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
-		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
-		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
+//		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
+//		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
+//		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
+//		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
+
+        ImGuiKey imguikey = KeycodeToImGuiKey(keycode);
+
+        if (imguikey != ImGuiKey_None)
+        {
+            io.AddKeyEvent(imguikey, true);
+        }
 
         return false;
     }
@@ -119,17 +127,29 @@ namespace Engine {
         ImGuiIO& io = ImGui::GetIO();
 		int keycode = event.GetKeycode();
 		if (keycode > 0 && keycode < 0x10000)
-			io.AddInputCharacter((unsigned short)keycode);
+			io.AddInputCharacter((unsigned int)keycode);
 
         return false;
     }
+
     bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& event)
     {
+//        ImGuiIO& io = ImGui::GetIO();
+//		io.KeysDown[event.GetKeycode()] = false;
         ImGuiIO& io = ImGui::GetIO();
-		io.KeysDown[event.GetKeycode()] = false;
+    
+        int keycode = event.GetKeycode();
+        ImGuiKey imguikey = KeycodeToImGuiKey(keycode);
+
+        if (imguikey != ImGuiKey_None)
+        {
+            io.AddKeyEvent(imguikey, false);
+        }
+
 
         return false;
     }
+
     bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& event)
     {
 

@@ -162,6 +162,7 @@ namespace Engine
 			MouseMovedEvent event((float)xPos, (float)yPos);
 			data.EventCallbackFn(event);
 		});
+
     }
 
     void LinuxWindow::OnUpdate()

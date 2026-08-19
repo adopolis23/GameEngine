@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Engine/Vendor/imgui/imgui.h"
 #include "imgui.h"
 #include "OpenGl/ImGuiOpenGLRenderer.h"
 #include "GLFW/glfw3.h"
