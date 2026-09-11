@@ -27,6 +27,7 @@ include "Engine/Vendor/imgui"
 project "Engine"
     kind "SharedLib"  -- This creates a DLL
     language "C++"
+    cppdialect "C++23"
     -- targetname "Engine"
     targetextension ".so"
 
@@ -116,6 +117,7 @@ project "Engine"
 project "Sandbox"
     kind "ConsoleApp"  -- or "WindowedApp" for GUI
     language "C++"
+    cppdialect "C++23"
 
     targetname "Sandbox"
     targetdir "%{prj.name}/bin/%{cfg.buildcfg}/%{cfg.platform}"

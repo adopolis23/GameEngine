@@ -104,13 +104,10 @@ namespace Engine {
 
     bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& event)
     {
+        ENGINE_CORE_INFO("Key Pressed Event: {}", event.GetKeycode());
+
         ImGuiIO& io = ImGui::GetIO();
 		int keycode = event.GetKeycode();
-
-//		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
-//		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
-//		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
-//		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
 
         ImGuiKey imguikey = KeycodeToImGuiKey(keycode);
 
@@ -134,8 +131,8 @@ namespace Engine {
 
     bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& event)
     {
-//        ImGuiIO& io = ImGui::GetIO();
-//		io.KeysDown[event.GetKeycode()] = false;
+        ENGINE_CORE_INFO("Key Released Event: {}", event.GetKeycode());
+
         ImGuiIO& io = ImGui::GetIO();
     
         int keycode = event.GetKeycode();
