@@ -37,6 +37,8 @@ namespace Engine
             virtual size_t GetWidth() const = 0; 
             virtual size_t GetHeight() const = 0; 
 
+            virtual void* GetNativeWindow() const = 0; 
+
             virtual void SetEventCallback(const EventCallback& callback) = 0;
 
             // creates a window with the default props if none are provided

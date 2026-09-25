@@ -1,0 +1,753 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/context.o",
+      "src/context.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/context.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/context.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/egl_context.o",
+      "src/egl_context.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/egl_context.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/egl_context.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/glx_context.o",
+      "src/glx_context.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/glx_context.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/glx_context.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/init.o",
+      "src/init.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/init.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/init.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/input.o",
+      "src/input.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/input.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/input.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/linux_joystick.o",
+      "src/linux_joystick.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/linux_joystick.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/linux_joystick.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/monitor.o",
+      "src/monitor.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/monitor.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/monitor.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/null_init.o",
+      "src/null_init.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/null_init.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/null_init.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/null_joystick.o",
+      "src/null_joystick.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/null_joystick.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/null_joystick.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/null_monitor.o",
+      "src/null_monitor.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/null_monitor.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/null_monitor.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/null_window.o",
+      "src/null_window.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/null_window.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/null_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/osmesa_context.o",
+      "src/osmesa_context.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/osmesa_context.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/osmesa_context.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/platform.o",
+      "src/platform.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/platform.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/platform.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/posix_module.o",
+      "src/posix_module.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/posix_module.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/posix_module.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/posix_poll.o",
+      "src/posix_poll.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/posix_poll.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/posix_poll.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/posix_thread.o",
+      "src/posix_thread.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/posix_thread.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/posix_thread.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/posix_time.o",
+      "src/posix_time.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/posix_time.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/posix_time.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/vulkan.o",
+      "src/vulkan.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/vulkan.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/vulkan.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/window.o",
+      "src/window.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/window.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/x11_init.o",
+      "src/x11_init.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/x11_init.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/x11_init.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/x11_monitor.o",
+      "src/x11_monitor.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/x11_monitor.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/x11_monitor.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/x11_window.o",
+      "src/x11_window.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/x11_window.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/x11_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_GLFW_X11",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "glfw/obj/Debug/x64/xkb_unicode.o",
+      "src/xkb_unicode.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/src/xkb_unicode.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/GLFW/glfw/obj/Debug/x64/xkb_unicode.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-D_DEBUG",
+      "-Iinclude",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-c",
+      "-o",
+      "Glad/obj/Debug/x64/glad.o",
+      "src/glad.c"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/Glad",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/Glad/src/glad.c",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/Glad/Glad/obj/Debug/x64/glad.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DDEBUG",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "ImGui/obj/Debug/x64/imgui.o",
+      "imgui.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/imgui.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/ImGui/obj/Debug/x64/imgui.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DDEBUG",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "ImGui/obj/Debug/x64/imgui_demo.o",
+      "imgui_demo.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/imgui_demo.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/ImGui/obj/Debug/x64/imgui_demo.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DDEBUG",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "ImGui/obj/Debug/x64/imgui_draw.o",
+      "imgui_draw.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/imgui_draw.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/ImGui/obj/Debug/x64/imgui_draw.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DDEBUG",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "ImGui/obj/Debug/x64/imgui_tables.o",
+      "imgui_tables.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/imgui_tables.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/ImGui/obj/Debug/x64/imgui_tables.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DDEBUG",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "ImGui/obj/Debug/x64/imgui_widgets.o",
+      "imgui_widgets.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui",
+    "file": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/imgui_widgets.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/Vendor/imgui/ImGui/obj/Debug/x64/imgui_widgets.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/ImGuiLayer.o",
+      "Engine/src/ImGui/ImGuiLayer.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/ImGui/ImGuiLayer.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/ImGuiLayer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/ImGuiOpenGLRenderer.o",
+      "Engine/src/OpenGl/ImGuiOpenGLRenderer.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/OpenGl/ImGuiOpenGLRenderer.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/ImGuiOpenGLRenderer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/Layer.o",
+      "Engine/src/Layer.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/Layer.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/Layer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/LayerStack.o",
+      "Engine/src/LayerStack.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/LayerStack.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/LayerStack.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/LinuxWindow.o",
+      "Engine/src/Linux/LinuxWindow.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/Linux/LinuxWindow.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/LinuxWindow.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/Log.o",
+      "Engine/src/Log.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/Log.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/Log.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-D_WIN64",
+      "-D_DEBUG",
+      "-IEngine/include",
+      "-IEngine/src",
+      "-IEngine/Vendor/spdlog/include",
+      "-IEngine/Vendor/GLFW/include",
+      "-IEngine/Vendor/Glad/include",
+      "-IEngine/Vendor/imgui",
+      "-m64",
+      "-fPIC",
+      "-g",
+      "-std=c++23",
+      "-pthread",
+      "-fPIC",
+      "-std=c++11",
+      "-c",
+      "-o",
+      "Engine/obj/Debug/x64/application.o",
+      "Engine/src/application/application.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Engine/src/application/application.cpp",
+    "output": "/home/bran406/dev/GameEngine/Engine/obj/Debug/x64/application.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-DLINUX",
+      "-D_DEBUG",
+      "-ISandbox/include",
+      "-ISandbox/src",
+      "-IEngine/include",
+      "-IEngine/Vendor/spdlog/include",
+      "-m64",
+      "-g",
+      "-std=c++23",
+      "-std=c++17",
+      "-Wall",
+      "-c",
+      "-o",
+      "Sandbox/obj/Debug/x64/main.o",
+      "Sandbox/src/main.cpp"
+    ],
+    "directory": "/home/bran406/dev/GameEngine",
+    "file": "/home/bran406/dev/GameEngine/Sandbox/src/main.cpp",
+    "output": "/home/bran406/dev/GameEngine/Sandbox/obj/Debug/x64/main.o"
+  }
+]
