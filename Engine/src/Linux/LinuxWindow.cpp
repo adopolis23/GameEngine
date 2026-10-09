@@ -165,6 +165,11 @@ namespace Engine
 
     }
 
+    void* LinuxWindow::GetNativeWindow() const
+    {
+        return static_cast<void*>(mWindow);
+    }
+
     void LinuxWindow::OnUpdate()
     {
         glfwPollEvents();

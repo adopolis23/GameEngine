@@ -1,6 +1,7 @@
 #pragma once
 
 
+#include <random>
 namespace Engine
 {
 
@@ -22,9 +23,12 @@ namespace Engine
         static inline float GetMouseX() { return mInstance->GetMouseXImpl(); }
         static inline float GetMouseY() { return mInstance->GetMouseYImpl(); }
 
+        static inline bool IsMouseButtonPressed() { return mInstance->IsMouseButtonPresedImpl(); }
+
 
     protected:
         // Implementations, To be defined in derived classes
+        virtual bool IsMouseButtonPressedImpl() = 0;
         virtual int GetKeyPressedImpl() = 0;
         virtual std::pair<float, float> GetMousePositionImpl() = 0;
         virtual float GetMouseXImpl() = 0;

@@ -18,6 +18,8 @@ namespace Engine
 
             void OnUpdate() override;
 
+            void* GetNativeWindow() const override;
+
             inline size_t GetWidth() const override { return mWindowData.Width; }
             inline size_t GetHeight() const override { return mWindowData.Height; }
 

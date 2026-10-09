@@ -1,4 +1,5 @@
 #include "Linux/LinuxInput.h"
+#include "application.h"
 #include "Events/Input.h"
 
 #include <GLFW/glfw3.h>
@@ -7,12 +8,12 @@ namespace Engine {
 
 	Input* Input::mInstance = new LinuxInput();
 
-	bool LinuxInput::IsKeyPressedImpl(int keycode)
-	{
-		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
-		auto state = glfwGetKey(window, keycode);
-		return state == GLFW_PRESS || state == GLFW_REPEAT;
-	}
+//	bool LinuxInput::IsKeyPressedImpl(int keycode)
+//	{
+//		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+//		auto state = glfwGetKey(window, keycode);
+//		return state == GLFW_PRESS || state == GLFW_REPEAT;
+//	}
 
 	bool LinuxInput::IsMouseButtonPressedImpl(int button)
 	{

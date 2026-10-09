@@ -29,7 +29,7 @@ namespace Engine
         public:
             using EventCallback = std::function<void(Event&)>;
 
-            virtual ~Window() {}
+            virtual ~Window() = default; 
 
             virtual void Init(const struct WindowData& props) = 0;
             virtual void OnUpdate() = 0;
