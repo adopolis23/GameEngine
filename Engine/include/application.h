@@ -44,6 +44,8 @@ namespace Engine {
                 return *mInstance;
             }
 
+            static inline Application& Get() { return *mInstance; }
+
 
         private:
             bool OnWindowClose(WindowCloseEvent& e);

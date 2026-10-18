@@ -8,7 +8,7 @@ namespace Engine
     class ENGINE_API KeyEvent : public Event
     {
         public:
-            inline int GetKeycode() const { return mKeycode; };
+            inline int GetKeyCode() const { return mKeycode; };
 
             EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput);
 

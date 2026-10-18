@@ -104,10 +104,10 @@ namespace Engine {
 
     bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& event)
     {
-        ENGINE_CORE_INFO("Key Pressed Event: {}", event.GetKeycode());
+        ENGINE_CORE_INFO("Key Pressed Event: {}", event.GetKeyCode());
 
         ImGuiIO& io = ImGui::GetIO();
-		int keycode = event.GetKeycode();
+		int keycode = event.GetKeyCode();
 
         ImGuiKey imguikey = KeycodeToImGuiKey(keycode);
 
@@ -122,7 +122,7 @@ namespace Engine {
     bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& event)
     {
         ImGuiIO& io = ImGui::GetIO();
-		int keycode = event.GetKeycode();
+		int keycode = event.GetKeyCode();
 		if (keycode > 0 && keycode < 0x10000)
 			io.AddInputCharacter((unsigned int)keycode);
 
@@ -131,11 +131,11 @@ namespace Engine {
 
     bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& event)
     {
-        ENGINE_CORE_INFO("Key Released Event: {}", event.GetKeycode());
+        ENGINE_CORE_INFO("Key Released Event: {}", event.GetKeyCode());
 
         ImGuiIO& io = ImGui::GetIO();
     
-        int keycode = event.GetKeycode();
+        int keycode = event.GetKeyCode();
         ImGuiKey imguikey = KeycodeToImGuiKey(keycode);
 
         if (imguikey != ImGuiKey_None)
