@@ -1,5 +1,6 @@
 #include "application.h"
 #include "Events/ApplicationEvent.h"
+#include "ImGui/ImGuiLayer.h"
 #include "Linux/LinuxWindow.h"
 #include "Log.h"
 #include "Window.h"
@@ -18,11 +19,12 @@ Engine::Application::Application()
 
     mWindow = std::unique_ptr<Window>(Window::Create());
 
-
-    //void SetEventCallback(const EventCallback& callback) override { mWindowData.Callback = callback; }
     mWindow->SetEventCallback([this](Event& e) {
         this->OnEvent(e);
     });
+
+    mImGuiLayer = new ImGuiLayer();
+    PushOverlay(mImGuiLayer);
 }
 
 Engine::Application::~Application()
@@ -86,10 +88,19 @@ void Engine::Application::Run() {
         glClearColor(1, 0, 1, 1);
         glClear(GL_COLOR_BUFFER_BIT);
 
+
         for (Layer* layer : mLayerStack)
         {
             layer->OnUpdate();
         }
+
+        // Render ImGui Layers
+        mImGuiLayer->Begin();
+        for (Layer* layer : mLayerStack)
+        {
+            layer->OnImGuiRender();
+        }
+        mImGuiLayer->End();
 
         mWindow->OnUpdate();
 

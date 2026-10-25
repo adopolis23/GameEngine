@@ -1,5 +1,5 @@
 #include "ImGui/ImGuiLayer.h"
-#include "Log.h"
+#include "imgui.h"
 #include <Engine.h>
 
 
@@ -12,18 +12,11 @@ public:
 	{
 	}
 
-	void OnEvent(Engine::Event& event) override
+    virtual void OnImGuiRender() override
 	{
-		//ENGINE_TRACE("{0}", event);
-		if (event.GetEventType() == Engine::EventType::KeyPressed)
-		{
-			Engine::KeyPressedEvent& e = (Engine::KeyPressedEvent&)event;
-
-			if (e.GetKeyCode() == KEY_TAB)
-				ENGINE_TRACE("Tab key is pressed (event)!");
-
-			ENGINE_TRACE("{0}", (char)e.GetKeyCode());
-		}
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
 	}
 
 };
@@ -36,8 +29,6 @@ class Sandbox : public Engine::Application
         Sandbox()
         {
             PushLayer(new ExampleLayer());
-
-            PushOverlay(new Engine::ImGuiLayer());
         };
 
         ~Sandbox() {};

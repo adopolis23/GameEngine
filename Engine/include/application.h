@@ -1,5 +1,6 @@
 #pragma once
 
+#include "ImGui/ImGuiLayer.h"
 #include "core.h"
 #include "Log.h"
 #include "Window.h"
@@ -58,6 +59,8 @@ namespace Engine {
 
             // Application is a Singleton, this is the only instance.
             static Application* mInstance;
+
+            ImGuiLayer* mImGuiLayer;
 
     };
 

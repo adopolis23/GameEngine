@@ -46,6 +46,7 @@ project "Engine"
     includedirs {
         "%{prj.name}/include",
         "%{prj.name}/src",
+        "%{prj.name}/Vendor",
 
         -- spdlog include dirs
         "%{prj.name}/Vendor/spdlog/include",
@@ -57,7 +58,10 @@ project "Engine"
         "%{prj.name}/Vendor/Glad/include",
 
         -- imgui include dirs
-        "%{prj.name}/Vendor/imgui"
+        "%{prj.name}/Vendor/imgui",
+
+        -- glm include dirs
+        "%{prj.name}/Vendor/glm/glm"
     }
 
     -- Library directories 
@@ -135,17 +139,20 @@ project "Sandbox"
         "%{prj.name}/include",
         "%{prj.name}/src",
         "Engine/include",  -- Path to engine headers
-        "Engine/Vendor/spdlog/include" -- path to engine spdlog headers TODO: Figure out how to automatically include this
+        "Engine/Vendor/spdlog/include", -- path to engine spdlog headers TODO: Figure out how to automatically include this
+        "Engine/Vendor/imgui",
     }
 
     -- Library directories
     libdirs {
-        "Engine/bin/%{cfg.buildcfg}/%{cfg.platform}"  -- Path to engine .so
+        "Engine/bin/%{cfg.buildcfg}/%{cfg.platform}",  -- Path to engine .so
+        "Engine/Vendor/imgui/ImGui/Debug/bin/x64",
     }
 
     -- Link with engine library
     links {
-        "Engine"  -- Links to libEngine.so on Linux
+        "Engine",  -- Links to libEngine.so on Linux
+        "ImGui"
     }
 
     -- Platform-specific settings

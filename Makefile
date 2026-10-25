@@ -56,7 +56,7 @@ ifneq (,$(Engine_config))
 	@${MAKE} --no-print-directory -C . -f Engine.make config=$(Engine_config)
 endif
 
-Sandbox: Engine
+Sandbox: Engine ImGui
 ifneq (,$(Sandbox_config))
 	@echo "==== Building Sandbox ($(Sandbox_config)) ===="
 	@${MAKE} --no-print-directory -C . -f Sandbox.make config=$(Sandbox_config)

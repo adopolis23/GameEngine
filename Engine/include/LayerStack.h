@@ -26,7 +26,7 @@ namespace Engine {
 
 
         // ????
-		std::vector<Layer*>::iterator mLayerInsert;
+        unsigned int mLayerInsertIndex{0};
 	};
 
 }
