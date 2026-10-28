@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Renderer/OpenGl/OpenGLContext.h"
 #include "Window.h"
 #include "GLFW/glfw3.h"
 #include "Log.h"
@@ -31,6 +32,7 @@ namespace Engine
 
         private:
             GLFWwindow* mWindow;
+            Context* mContext;
             WindowData mWindowData;
 
     };

@@ -3,6 +3,7 @@
 #include "Linux/LinuxWindow.h"
 #include "GLFW/glfw3.h"
 #include "Log.h"
+#include "Renderer/OpenGl/OpenGLContext.h"
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/KeyEvent.h"
@@ -57,14 +58,10 @@ namespace Engine
         }
 
         mWindow = glfwCreateWindow(mWindowData.Width, mWindowData.Height, mWindowData.Title.c_str(), NULL, NULL);
-        glfwMakeContextCurrent(mWindow);
 
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        if (!status)
-        {
-            ENGINE_CORE_ERROR("Failed to initialize GLAD");
-            return;
-        }
+        mContext = new OpenGLContext(mWindow);
+        mContext->Init();
+
 
         //bind the user data of this window to the address of mWindowData
         glfwSetWindowUserPointer(mWindow, &mWindowData);

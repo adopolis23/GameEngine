@@ -23,7 +23,7 @@
 #define ASSERT(cond, msg) \
     do { \
         if (!(static_cast<bool> (cond))) { \
-            ENGINE_CORE_ERROR(msg); \
+            ENGINE_CORE_INFO(msg); \
             std::abort(); \
         } \
     } while (0)
